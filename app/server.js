@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import db from "./config/database.config.js";
 import Router from "./routes/pokemon.route.js";
+import { appPort } from "./config/common.config.js";
  
 const app = express();
 app.use(express.json());
@@ -16,4 +17,4 @@ try {
  
 app.use(Router);
  
-app.listen(4000, () => console.log('Server running at http://localhost:5000'));
+app.listen(appPort, () => console.log(`Server running at http://localhost:${appPort}`));
