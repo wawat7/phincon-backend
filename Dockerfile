@@ -25,4 +25,4 @@ EXPOSE 4000
 
 HEALTHCHECK --interval=20s --start-period=5s CMD curl -f localhost:4000/health
 
-CMD npm run start
+CMD npm run migrate && npm run start
